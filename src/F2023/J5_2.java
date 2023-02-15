@@ -54,3 +54,13 @@ public class J5_2 {
         return 0;
     }
 }
+/*
+MENU
+5
+7
+F T R U B L K
+P M N A X C U
+A E R C N E O
+M N E U A R M
+M U N E M N S
+ */

@@ -30,9 +30,16 @@ public class J5 {
         int count = 0;
         for(int i=0; i<map.length; i++){
             for(int j=0; j<map[0].length; j++){
-                int n = dp(map, find, 0, i, j, 0);
-                int m = dp(map, find, 0, i, j, 1);
-                count+=n+m;
+                int n = 0;
+                n += dp(map, find, 0, i, j, 0);
+                n += dp(map, find, 0, i, j, 1);
+                n += dp(map, find, 0, i, j, 2);
+                n += dp(map, find, 0, i, j,3);
+                n += dp(map, find, 0, i, j,4);
+                n += dp(map, find, 0, i, j,5);
+                n += dp(map, find, 0, i, j,6);
+                n += dp(map, find, 0, i, j,7);
+                count+=n;
             }
         }
         return count;
@@ -45,10 +52,29 @@ public class J5 {
             return 1;
         }
         if(map[x][y]==find.charAt(cur)){
+            if(dir==0){
+                return dp(map, find, cur+1, x, y-1, 4)+dp(map, find, cur+1, x+1, y, 2)+dp(map, find, cur+1, x-1, y, 6);
+            }
             if(dir==1){
-                return dp(map, find, cur+1, x, y+1, 1)+dp(map, find, cur+1, x, y-1, 1)+dp(map, find, cur+1, x+1, y, 1)+dp(map, find, cur+1, x-1, y, 1);
-            } else{
-                return dp(map, find, cur+1, x+1, y+1, 0)+dp(map, find, cur+1, x+1, y-1, 0)+dp(map, find, cur+1, x-1, y+1, 0)+dp(map, find, cur+1, x-1, y-1, 0);
+                return dp(map, find, cur+1, x+1, y-1, 3)+dp(map, find, cur+1, x-1, y+1, 7)+dp(map, find, cur+1, x-1, y-1, 5);
+            }
+            if(dir==2){
+                return dp(map, find, cur+1, x, y+1, 0)+dp(map, find, cur+1, x, y-1, 4)+dp(map, find, cur+1, x-1, y, 6);
+            }
+            if(dir==3){
+                return dp(map, find, cur+1, x+1, y+1, 1)+dp(map, find, cur+1, x-1, y+1, 7)+dp(map, find, cur+1, x-1, y-1, 5);
+            }
+            if(dir==4){
+                return dp(map, find, cur+1, x, y+1, 0)+dp(map, find, cur+1, x+1, y, 2)+dp(map, find, cur+1, x-1, y, 6);
+            }
+            if(dir==5){
+                return dp(map, find, cur+1, x+1, y+1, 1)+dp(map, find, cur+1, x+1, y-1, 3)+dp(map, find, cur+1, x-1, y+1, 7);
+            }
+            if(dir==6){
+                return dp(map, find, cur+1, x, y+1, 0)+dp(map, find, cur+1, x, y-1, 4)+dp(map, find, cur+1, x+1, y, 2);
+            }
+            if(dir==7){
+                return dp(map, find, cur+1, x+1, y+1, 1)+dp(map, find, cur+1, x+1, y-1, 3)+dp(map, find, cur+1, x-1, y-1, 5);
             }
         }
         return 0;
