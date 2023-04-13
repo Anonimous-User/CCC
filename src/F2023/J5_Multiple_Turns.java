@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class J5_Without_The_BS_Directions {
+public class J5_Multiple_Turns {
     private static ArrayList<String> used = new ArrayList<String>();
     private static HashMap<Integer, Integer> oppo = new HashMap<>();
     public static void main(String[] args) throws IOException {

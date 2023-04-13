@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class J5_With_The_BS_Directions {
+public class J5_Single_Turn {
     public static void main(String[] args) throws IOException {
         InputStreamReader in=new InputStreamReader(System.in);
         BufferedReader br=new BufferedReader(in);
