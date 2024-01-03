@@ -19,6 +19,7 @@ public class S3 {
             docked.remove(docked.floor(gate));
             counter++;
         }
+        in.close();
         System.out.println(counter);
     }
 }
