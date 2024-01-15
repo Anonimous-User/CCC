@@ -1,7 +1,7 @@
-package F2021_V2;
+package F2021;
 import java.util.Scanner;
 
-public class J4 {
+public class J4_v2 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		String books = input.nextLine();

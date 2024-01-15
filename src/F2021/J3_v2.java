@@ -1,8 +1,8 @@
-package F2021_V2;
+package F2021;
 
 import java.util.Scanner;
 
-public class J3 {
+public class J3_v2 {
 	public static void main(String[] args) {
 	    Scanner input = new Scanner(System.in);
 	    String turn = "";
